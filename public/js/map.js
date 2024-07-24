@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const popup = new mapboxgl.Popup({ offset: 25 })
       .setLngLat(coordinates)
-      .setHTML(`<h3>${title}</h3>`)
+      .setHTML(`<h3>${listing.title}</h3>`)
       .addTo(map);
 });
 
