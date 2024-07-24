@@ -15,33 +15,69 @@
 // .addTo(map);
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("Map script loaded.");
+// document.addEventListener("DOMContentLoaded", function () {
+//     console.log("Map script loaded.");
   
-    if (!mapToken || !listing) {
+//     if (!mapToken || !listing) {
+//       console.error("Map token or listing data is missing.");
+//       return;
+//     }
+  
+//     const coordinates = listing.geometry && listing.geometry.coordinates;
+//     if (!coordinates || coordinates.length !== 2) {
+//       console.error("Listing coordinates are missing or invalid.");
+//       return;
+//     }
+  
+//     mapboxgl.accessToken = mapToken;
+    
+//     const map = new mapboxgl.Map({
+//       container: 'map',
+//       style: 'mapbox://styles/mapbox/streets-v11',
+//       center: coordinates,
+//       zoom: 12
+//     });
+  
+//     new mapboxgl.Marker()
+//       .setLngLat(coordinates)
+//       .addTo(map);
+//   });
+  
+
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("Map script loaded.");
+
+  if (!mapToken || !listing) {
       console.error("Map token or listing data is missing.");
       return;
-    }
-  
-    const coordinates = listing.geometry && listing.geometry.coordinates;
-    if (!coordinates || coordinates.length !== 2) {
+  }
+
+  const coordinates = listing.geometry && listing.geometry.coordinates;
+  if (!coordinates || coordinates.length !== 2) {
       console.error("Listing coordinates are missing or invalid.");
       return;
-    }
-  
-    mapboxgl.accessToken = mapToken;
-    
-    const map = new mapboxgl.Map({
+  }
+
+  const title = listing.title || "No title provided"; // Assuming the title is in the listing object
+
+  mapboxgl.accessToken = mapToken;
+
+  const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
       center: coordinates,
       zoom: 12
-    });
-  
-    new mapboxgl.Marker()
+  });
+
+  new mapboxgl.Marker()
       .setLngLat(coordinates)
       .addTo(map);
-  });
-  
+
+  const popup = new mapboxgl.Popup({ offset: 25 })
+      .setLngLat(coordinates)
+      .setHTML(`<h3>${title}</h3>`)
+      .addTo(map);
+});
+
   
   
