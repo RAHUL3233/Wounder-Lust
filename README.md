@@ -9,4 +9,4 @@ Developed a web application that simulates the functionalities of a property ren
 
 CONTRIBUTOR: 1 Rahul Raj 
              2 Anamika Jha
-             2 Aryan Raj
+             3 Aryan Raj
