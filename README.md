@@ -1,4 +1,4 @@
-# Wounder-Lust
+# Wonder-Lust
 Developed a web application that simulates the functionalities of a property rental platform.
 – Tools & Technologies used: HTML, CSS, JavaScript, NodeJs, ExpressJs, MongoDB.
 – User Authentication: Implemented secure user registration and login functionality using Passport.js.
