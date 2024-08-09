@@ -1,5 +1,4 @@
 # Wonder-Lust
-### Project: Property Rental Platform Simulation
 
 ### Tools & Technologies Used
 - HTML, CSS, JavaScript, NodeJs, ExpressJs, MongoDB.
