@@ -1,4 +1,4 @@
-# Wonder-Lust
+# Stay-Connect
 
 ### Tools & Technologies Used
 - HTML, CSS, JavaScript, NodeJs, ExpressJs, MongoDB.
